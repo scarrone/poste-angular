@@ -1,0 +1,40 @@
+
+<div class="pagina">
+
+    <!-- Parte sinistra -->
+    <div class="utente">
+        <h2>Utenti</h2>
+        <label for="reparto" class="form-label">Seleziona il reparto in cui vuoi andare</label>
+        <select name="reparto" id="reparto" class="form-select" [(ngModel)]="repartoValue">
+            <option value="radiologia">Radiologia</option>
+            <option value="cardiologia">Cardiologia</option>
+            <option value="neurologia">Neurologia</option>
+            <option value="nefrologia">Nefrologia</option>
+        </select>
+        <br>
+        <button (click)="staccaTicket()" class="btn btn-primary">Ticket</button>
+        <div class="ultimo-ticket">
+            {{ ultimoTicketFormattato }}
+
+        </div>
+    </div>
+    <!-- Parte centrale -->
+    <div class="tabellone">
+        <h2>Tabellone</h2>
+        <div class="coda">
+        
+            <p *ngFor="let ticket of tabellone">
+                {{ ticket }}
+            </p>
+            
+     </div>
+    </div>
+    
+
+    <!-- parte destra -->
+    <div class="operatore">
+        <h2>Operatore</h2>
+        <button (click)="gestisciCoda()" class="btn btn-success">Gestisci coda</button>
+    </div>
+
+</div>

@@ -1,0 +1,90 @@
+
+.pagina {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    gap: 1rem;
+}
+
+.tabellone{
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 10px;
+    text-align: center;
+    flex: 2;
+}
+/* modo per richiamare la 'div class=coda' all'interno
+della 'div class=tabellone' */
+.tabellone > .coda {
+    font-size: 3rem;
+}
+
+.utente > .ultimo-ticket {
+    border: 1px solid black;
+    width: 80%;
+    margin:2rem auto 0 auto;
+    /* aspect-ratio consente di definire il rapporto
+    larhezza-altezza desiderato del riquadro di un elemento
+    Ciò significa che anche se il contenitore pricipale
+    o la dimensione del viewport cambiano, il browser 
+    regola le dimensioni */
+    aspect-ratio: 2/1;
+
+    /* HACK: quando voglio centrare sia verticalmente
+    che orizzontalmente un elemento, posso sfruttare
+    il 'display grid', applicando il 'justify-content'
+    è 'align-item' a 'center' */
+    display: grid;
+    /* mi permette di sistemare i vari
+    elementi all'interno, più o meno 
+    come voglio io, cioè con dello 
+    spazio tra di loro.
+    In realtà non serve neache più
+    Sarebbe servita solo nel caso gli elementi
+    avrebbero mantenuto la loro dimensione originale.
+    Avendo usato il flex su tutti gli elementi
+    cercheranno di occupare aempre merà (due occuperanno 1/4
+    mentre il tabelonne 2/4) */
+    justify-content: center;
+    align-items: center;
+    /* **fine hack */
+    font-size: 2.5rem;
+}
+
+.utente {
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    text-align: center;
+    flex: 1;
+}
+
+.operatore{
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    text-align: center;
+    flex: 1;
+}
+
+button {
+    /* In questo modo
+    ingrandendo la dimensione del font
+    dei pulsanti, giustamente si allargano
+    in automatico*/
+    font-size: 2.5rem;
+    /* sul padding, se vengono assegnati due valori, il primo
+    si riferisce alla parte 'top' e 'buttom', mentre il secondo
+    valorealla parte 'left' e 'right' */
+    padding: 1rem 2rem;
+}
+
+.form-select
+{
+    border-color: darkcyan;
+}
